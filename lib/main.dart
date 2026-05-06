@@ -40,12 +40,25 @@ class _FuturePageState extends State<FuturePage> {
     return http.get(url);
   }
 
+  Future<int> returnOneAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 1;
+  }
+
+  Future<int> returnTwoAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 2;
+  }
+
+  Future<int> returnThreeAsync() async {
+    await Future.delayed(const Duration(seconds: 3));
+    return 3;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Back from the Future'),
-      ),
+      appBar: AppBar(title: const Text('Back from the Future')),
       body: Center(
         child: Column(
           children: [
@@ -55,13 +68,14 @@ class _FuturePageState extends State<FuturePage> {
               onPressed: () {
                 setState(() {});
                 getData()
-                .then((value) {
-                  result = value.body.toString().substring(0, 450);
-                  setState(() {});
-                }).catchError((_) {
-                  result = 'An error occurred';
-                  setState(() {});
-                });
+                    .then((value) {
+                      result = value.body.toString().substring(0, 450);
+                      setState(() {});
+                    })
+                    .catchError((_) {
+                      result = 'An error occurred';
+                      setState(() {});
+                    });
               },
             ),
             const Spacer(),
