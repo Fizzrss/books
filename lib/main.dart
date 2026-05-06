@@ -91,6 +91,11 @@ class _FuturePageState extends State<FuturePage> {
               child: const Text('GO!'),
               onPressed: () {
                 count();
+                getNumber().then((value) {
+                  setState(() {
+                    result = value.toString();
+                  });
+                });
               },
             ),
             const Spacer(),
