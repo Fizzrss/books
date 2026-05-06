@@ -135,18 +135,7 @@ class _FuturePageState extends State<FuturePage> {
             ElevatedButton(
               child: const Text('GO!'),
               onPressed: () {
-                returnError()
-                    .then((value) {
-                      setState(() {
-                        result = 'Success';
-                      });
-                    })
-                    .catchError((onError) {
-                      setState(() {
-                        result = onError.toString();
-                      });
-                    })
-                    .whenComplete(() => print('Complete'));
+                handleError();
               },
             ),
             const Spacer(),
