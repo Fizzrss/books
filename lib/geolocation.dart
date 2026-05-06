@@ -26,7 +26,7 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Current Location')),
+      appBar: AppBar(title: const Text('Current Location Fiza')),
       body: Center(child: Text(myPosition)),
     );
   }
