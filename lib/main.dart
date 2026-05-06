@@ -55,6 +55,16 @@ class _FuturePageState extends State<FuturePage> {
     return 3;
   }
 
+  Future count() async {
+    int total = 0;
+    total = await returnOneAsync();
+    total += await returnTwoAsync();
+    total += await returnThreeAsync();
+    setState(() {
+      result = total.toString();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
