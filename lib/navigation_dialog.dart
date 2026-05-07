@@ -20,23 +20,23 @@ class _NavigationDialogScreenState extends State<NavigationDialogScreen> {
           content: const Text('Please choose a color'),
           actions: <Widget>[
             TextButton(
-              child: const Text('Red'),
+              child: const Text('light Blue Accent'),
               onPressed: () {
-                color = Colors.red.shade700;
+                color = Colors.lightBlueAccent;
                 Navigator.pop(context, color);
               },
             ),
             TextButton(
-              child: const Text('Green'),
+              child: const Text('pink Accent'),
               onPressed: () {
-                color = Colors.green.shade700;
+                color = Colors.pinkAccent;
                 Navigator.pop(context, color);
               },
             ),
             TextButton(
-              child: const Text('Blue'),
+              child: const Text('yellow Accent'),
               onPressed: () {
-                color = Colors.blue.shade700;
+                color = Colors.yellowAccent;
                 Navigator.pop(context, color);
               },
             ),
