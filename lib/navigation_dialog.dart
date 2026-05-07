@@ -55,7 +55,9 @@ class _NavigationDialogScreenState extends State<NavigationDialogScreen> {
       body: Center(
         child: ElevatedButton(
           child: const Text('Change Color'),
-          onPressed: () {},
+          onPressed: () {
+            _showColorDialog(context);
+          },
         ),
       ),
     );
